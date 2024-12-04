@@ -1,0 +1,18 @@
+1. Servidor Web
+Você desenvolverá um servidor web que responderá a uma requisição HTTP por vez. Seu servidor web deve aceitar e analisar a requisição HTTP, obter o arquivo solicitado do sistema de arquivos do servidor, criar uma mensagem de resposta HTTP composta pelo arquivo solicitado precedido por linhas de cabeçalho e, em seguida, enviar a resposta diretamente para o cliente. Se o arquivo solicitado não estiver presente no servidor, o servidor deve enviar uma mensagem HTTP "404 Não Encontrado" de volta ao cliente.
+
+Executando o Servidor 
+Coloque um arquivo HTML (por exemplo, HelloWorld.html) no mesmo diretório em que o servidor está localizado. Execute o programa do servidor. Determine o endereço IP do host que está executando o servidor (por exemplo, 128.238.251.26). De outro host, abra um navegador e forneça o URL correspondente. Por exemplo:
+http://128.238.251.26:6789/HelloWorld.html
+‘HelloWorld.html’ é o nome do arquivo que você colocou no diretório do servidor. Observe também o uso do número da porta após os dois pontos. Você precisa substituir esse número de porta pelo número da porta que você usou no código do servidor. No exemplo acima, usamos o número da porta 6789. O navegador deve então exibir o conteúdo de HelloWorld.html. Se você omitir ":6789", o navegador assumirá a porta 80 e você obterá a página da web do servidor apenas se o seu servidor estiver ouvindo na porta 80.
+Em seguida, tente obter um arquivo que não esteja presente no servidor. Você deve receber uma mensagem "404 Não Encontrado".
+
+2. Servidor Proxy
+Sua tarefa é desenvolver um pequeno servidor proxy web capaz de armazenar em cache páginas da web. É um servidor proxy muito simples que apenas entende solicitações GET simples, mas é capaz de lidar com todos os tipos de objetos - não apenas páginas HTML, mas também imagens.
+
+Geralmente, quando o cliente faz uma solicitação, a solicitação é enviada ao servidor web. O servidor web então processa a solicitação e envia uma mensagem de resposta ao cliente solicitante. Para melhorar o desempenho, criamos um servidor proxy entre o cliente e o servidor web. Agora, tanto a mensagem de solicitação enviada pelo cliente quanto a mensagem de resposta entregue pelo servidor web passam pelo servidor proxy. Em outras palavras, o cliente solicita os objetos via servidor proxy. O servidor proxy encaminhará a solicitação do cliente ao servidor web. O servidor web então gerará uma mensagem de resposta e a entregará ao servidor proxy, que por sua vez a envia ao cliente.
+
+Executando o Servidor Proxy
+Execute o programa do servidor proxy usando seu prompt de comando e então solicite uma página da web pelo seu navegador. Direcione as requisições para o servidor proxy usando seu endereço IP e número da porta.
+Por exemplo: http://localhost:8888/www.google.com
+Para usar o servidor proxy com o navegador e o proxy em computadores separados, você precisará do endereço IP no qual o servidor proxy está em execução. Nesse caso, ao executar o proxy, você precisará substituir o "localhost" pelo endereço IP do computador onde o servidor proxy está em execução. Observe também o número da porta usado. Você substituirá o número da porta usado aqui "8888" pelo número da porta que você utilizou no código do servidor, na qual o servidor proxy está ouvindo.
