@@ -1,0 +1,39 @@
+/* Estilização do corpo */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+    color: #333;
+}
+
+/* Estilização do cabeçalho */
+header {
+    background-color: #007bff;
+    color: white;
+    padding: 1rem 0;
+    text-align: center;
+}
+
+/* Estilização do título principal */
+header h1 {
+    margin: 0;
+    font-size: 2rem;
+}
+
+/* Estilização do conteúdo principal */
+main {
+    padding: 2rem;
+    text-align: center;
+}
+
+/* Estilização do rodapé */
+footer {
+    background-color: #333;
+    color: white;
+    padding: 1rem 0;
+    text-align: center;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
